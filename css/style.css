@@ -8,6 +8,9 @@
     --pink-price: #F16D7F;
     --pinl-link: #F26376;
     --bonus-color: #FBFBFB;
+    --pink-button:#E05C6E;
+    --pink-registration-bkg: #F8F3F4;
+    --registration-text: #B1B1B1;
 }
 
 .body {
@@ -34,13 +37,22 @@
     margin: -1px;
   }
 
-.header__nav {
-    display: none;
-}
-
 .header {
     background-color: var(--black);
     min-height: 75px;
+}
+
+.header__nav {
+    display: none;
+    position: absolute;
+    width: 232px;
+    background: var(--white-color);
+    right: 0;
+    top: 100%;
+}
+
+.header__nav:hover {
+    display: block;
 }
 
 .header__wrp {
@@ -55,16 +67,69 @@
 }
 
 .header__search {
-    margin: 0 0 0 41px;
+    margin: 10px 0 0 41px;
 }
 
 .header__link {
     margin: 0 0 0 33px;
 }
 
+.header__menu {
+    position: relative;
+}
+
 .header__menu-btn {
     background-color: transparent;
-    border: 1px solid;
+    border: none;
+}
+
+.header__menu-btn:hover + .header__nav,
+.header__menu-btn:focus + .header__nav {
+    display: block;
+}
+
+.icon-loupe {
+    fill: white;
+}
+
+.header__search:hover .icon-loupe,
+.header__search:focus .icon-loupe {
+    fill: #F16D7F;
+}
+
+.burger-icon {
+    fill: white;
+}
+
+.header__menu-btn:hover .burger-icon,
+.header__menu-btn:focus .burger-icon {
+    fill: #F16D7F;
+}
+
+.header__menu-btn:active {
+    outline: 1px solid white;
+}
+
+.person-icon {
+    fill: white;
+}
+
+.header__link:hover .person-icon,
+.header__link:focus .person-icon {
+    fill: #F16D7F;
+}
+
+.header__link:active {
+    outline: 1px solid white;
+}
+
+.basket-icon {
+    fill: white;
+}
+
+.header__link:hover .basket-icon,
+.header__link:focus .basket-icon {
+    fill: #F16D7F;
 }
 
 .brand {
@@ -85,6 +150,16 @@
     font-weight: 900;
     line-height: 58px;
     text-transform: uppercase;
+    position: relative;
+}
+
+.brand__title::before {
+    content: '';
+    background: #F16D7F;
+    width: 12px;
+    height: 100%;
+    position: absolute;
+    left: -26px;
 }
 
 .brand__subtitle {
@@ -218,6 +293,43 @@
     color: var(--pink-price);
 }
 
+.cart-wrapper {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    background: #3A3838DB;
+    width: 100%;
+    min-height: 420px;
+    top: 0;
+}
+
+.product-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    color: var(--white-color);
+    background: transparent;
+    border-color: var(--white-color);
+    padding: 10px 13px 8px 12px;
+}
+
+.overlay,
+.product-btn {
+    display: none;
+}
+
+.cart:hover .overlay,
+.cart:hover .product-btn {
+    display: block;
+}
+
 .products__link {
     font-size: 16px;
     font-style: normal;
@@ -227,6 +339,18 @@
     border: 1px solid #F26376;
     text-decoration: none;
     color: var(--pinl-link);
+}
+
+.products__link:hover,
+.products__link:focus {
+    color: white;
+    cursor: pointer;
+    background: #F16D7F;
+    opacity: 0.8;
+}
+
+.products__link:active {
+    color: black;
 }
 
 .products-link-wrp {
@@ -309,6 +433,7 @@
     flex-direction: column;
     align-items: center;
     margin: 150px 0 0 0;
+    position: relative;
 }
 
 .footer__form-title {
@@ -328,6 +453,56 @@
     text-align: center;
     text-transform: uppercase;
     margin: 0 0 32px 0;
+}
+
+.footer__form-email {
+    width: 323px;
+    height: 49px;
+    background: #E1E1E1;
+    box-sizing: border-box;
+    border-radius: 25px;
+    padding: 7px 22px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    border-color: transparent;
+    display: inline;
+}
+
+.footer__form-email:hover {
+    outline: 1px solid grey;
+}
+
+.footer__form-email:focus {
+    outline: 1px solid grey;   
+}
+
+.footer__form-btn {
+    width: 100px;
+    height: 49px;
+    border-radius: 0 20px 20px 0;
+    box-sizing: border-box;
+    padding: 7px 8px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    background: var(--pink-button);
+    color: var(--white-color);
+    border-color: transparent;
+    position: absolute;
+    right: 10px;
+}
+
+.footer__form-btn:hover,
+.footer__form-btn:focus {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.footer__form-btn:active {
+    opacity: 0.7;
 }
 
 .footer__bottom {
@@ -356,4 +531,166 @@
 
 .footer__bottom-item {
     margin: 24px 7px 0 0;
+}
+
+.icon-facebook {
+    fill: white;
+}
+
+.footer__bottom-item:hover .icon-facebook,
+.footer__bottom-item:focus .icon-fasebook {
+    fill: #F16D7F;
+}
+
+.icon-inst {
+    fill: white;
+}
+
+.footer__bottom-item:hover .icon-inst,
+.footer__bottom-item:focus .icon-inst {
+    fill: #F16D7F;
+}
+
+.icon-pint {
+    fill: white;
+}
+
+.footer__bottom-item:hover .icon-pint,
+.footer__bottom-item:focus .icon-pint {
+    fill: #F16D7F;
+}
+
+.icon-twitter {
+    fill: white;
+}
+
+.footer__bottom-item:hover .icon-twitter,
+.footer__bottom-item:focus .icon-twitter {
+    fill: #F16D7F;
+}
+
+/* Registration */
+
+.registration {
+    min-height: 148px;
+    background-color: var(--pink-registration-bkg);
+}
+
+.registration__title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: var(--pink-price);
+    padding: 59px 0 0 0;
+}
+
+.registration__form-wrp {
+    display: flex;
+    margin-top: 64px;
+}
+
+label, input {
+    display: block;
+}
+
+.form-legend {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 19px;
+    margin-bottom: 20px;
+}
+
+.registration__form-input {
+    margin-bottom: 20px;
+    padding: 12px 17px 16px;
+    width: 360px;
+    border: 1px solid #A4A4A4;
+}
+
+.registration__form-input:hover, :focus {
+    outline: 1px solid grey;
+}
+
+
+.checkbox {
+    display: flex;
+    margin: 34px 0 34px 0;
+}
+
+.form__text {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px;
+    color: var(--registration-text);
+    max-width: 360px;
+    margin-bottom: 39px;
+}
+
+.form__btn {
+    width: 167px;
+    height: 50px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    color: var(--white-color);
+    background-color: var(--pink-price);
+    border-color: transparent;
+    margin-bottom: 96px;
+}
+
+.form__btn:hover,
+.form__btn:focus {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.form__btn:active {
+    opacity: 0.7;
+}
+
+.arrow-registration-btn {
+    margin-left: 20px;
+}
+
+.perks {
+    margin: 0 128px;
+}
+
+.perks__title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 29px;
+    text-transform: uppercase;
+}
+
+.perks__text {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 29px;
+    margin: 22px 0 22px 0;
+}
+
+.perks__item {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 29px;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.perks__item::before {
+    content: '';
+    background-image: url(../img/check-registration.svg);
+    position: absolute;
+    width: 20px;
+    height: 16px;
+    left: -46px;
 }
