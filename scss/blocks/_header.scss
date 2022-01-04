@@ -1,0 +1,94 @@
+.header {
+    background-color: $black;
+    min-height: 75px;
+    
+    &__nav {
+        display: none;
+        position: absolute;
+        width: 232px;
+        background: $white-color;
+        right: 0;
+        top: 100%;
+    }
+    
+    &__nav:hover {
+        display: block;
+    }
+    
+    &__wrp {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 18px;
+    }
+    
+    &__logo-form-wrp {
+        display: flex;
+    }
+    
+    &__search {
+        margin: 10px 0 0 41px;
+    }
+    
+    &__link {
+        margin: 0 0 0 33px;
+    }
+    
+    &__menu {
+        position: relative;
+    }
+    
+    &__menu-btn {
+        background-color: transparent;
+        border: none;
+    }
+    
+    &__menu-btn:hover + .header__nav,
+    &__menu-btn:focus + .header__nav {
+        display: block;
+    }
+    
+    .icon-loupe {
+        fill: white;
+    }
+    
+    &__search:hover .icon-loupe,
+    &__search:focus .icon-loupe {
+        fill: #F16D7F;
+    }
+    
+    .burger-icon {
+        fill: white;
+    }
+    
+    &__menu-btn:hover .burger-icon,
+    &__menu-btn:focus .burger-icon {
+        fill: #F16D7F;
+    }
+    
+    &__menu-btn:active {
+        outline: 1px solid white;
+    }
+    
+    .person-icon {
+        fill: white;
+    }
+    
+    &__link:hover .person-icon,
+    &__link:focus .person-icon {
+        fill: #F16D7F;
+    }
+    
+    &__link:active {
+        outline: 1px solid white;
+    }
+    
+    .basket-icon {
+        fill: white;
+    }
+    
+    &__link:hover .basket-icon,
+    &__link:focus .basket-icon {
+        fill: #F16D7F;
+    }
+}

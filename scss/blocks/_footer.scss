@@ -1,0 +1,170 @@
+.footer {
+    background-image: url(../img/footer-bcg.jpg);
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        min-height: 448px;
+    
+    }
+    
+    &__quote-wrp {
+        width: 360px;
+        text-align: center;
+        padding: 87px 0 0 0;
+        
+    }
+    
+    &__quote {
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        margin: 30px 0 0 0;
+    }
+    
+    &__form {
+
+        &-wrp {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 150px 0 0 0;
+            position: relative;
+        }
+        
+        &-title {
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 40px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        
+        &-text {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0 0 32px 0;
+        }
+        
+        &-email {
+            width: 323px;
+            height: 49px;
+            background: #E1E1E1;
+            box-sizing: border-box;
+            border-radius: 25px;
+            padding: 7px 22px;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 17px;
+            border-color: transparent;
+            display: inline;
+        }
+        
+        &-email:hover {
+            outline: 1px solid grey;
+        }
+        
+        &-email:focus {
+            outline: 1px solid grey;   
+        }
+        
+        &-btn {
+            width: 100px;
+            height: 49px;
+            border-radius: 0 20px 20px 0;
+            box-sizing: border-box;
+            padding: 7px 8px;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 17px;
+            background: $pink-button;
+            color: $white-color;
+            border-color: transparent;
+            position: absolute;
+            right: 10px;
+        }
+        
+        &-btn:hover,
+        &-btn:focus {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        
+        &-btn:active {
+            opacity: 0.7;
+        }
+    }
+    
+    &__bottom {
+        min-height: 79px;
+        background-color: $black;
+
+        &-wrp {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        &-copyright {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            color: $bonus-color;
+            margin: 30px 0 30px 0;
+        }
+        
+        &-list {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        &-item {
+            margin: 24px 7px 0 0;
+        }
+    }
+
+    .icon-facebook {
+        fill: white;
+    }
+    
+    &__bottom-item:hover .icon-facebook,
+    &__bottom-item:focus .icon-fasebook {
+        fill: #F16D7F;
+    }
+    
+    .icon-inst {
+        fill: white;
+    }
+    
+    &__bottom-item:hover .icon-inst,
+    &__bottom-item:focus .icon-inst {
+        fill: #F16D7F;
+    }
+    
+    .icon-pint {
+        fill: white;
+    }
+    
+    &__bottom-item:hover .icon-pint,
+    &__bottom-item:focus .icon-pint {
+        fill: #F16D7F;
+    }
+    
+    .icon-twitter {
+        fill: white;
+    }
+    
+    &__bottom-item:hover .icon-twitter,
+    &__bottom-item:focus .icon-twitter {
+        fill: #F16D7F;
+    }
+}

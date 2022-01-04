@@ -1,0 +1,41 @@
+.bonus {
+    background-color: $black;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    &__item {
+        text-align: center;
+        width: 360px;
+
+        &-img {
+            margin: 103px 0 0 0;
+        }
+        
+        &-img-procent {
+            margin: 95px 0 0 0;
+        }
+        
+        &-title {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            color: $bonus-color;
+            margin: 28px 0 0 0;
+            opacity: 70%;
+        }
+        
+        &-text {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 17px;
+            color: $bonus-color;
+            opacity: 70%;
+            margin: 16px 0 104px 0;
+        }
+    }
+}
