@@ -20,4 +20,16 @@
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     margin: -1px;
-  }
+}
+
+@media (max-width: $tablet-width) {
+    .container {
+        width: 736px;
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .container {
+        width: 360px;
+    }
+}

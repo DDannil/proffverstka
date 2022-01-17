@@ -1,0 +1,81 @@
+.perks {
+    width: 50%;
+
+    @include tablet {
+        width: 40%;
+    }
+
+    @include mobile {
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 29px;
+        text-transform: uppercase;
+
+        @include tablet {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 19px;
+        }
+
+        @include mobile {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 19px;
+        }
+    }
+    
+    &__text {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 29px;
+        margin: 22px 0 22px 0;
+
+        @include tablet {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 19px;
+        }
+    }
+    
+    &__item {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 29px;
+        margin-bottom: 16px;
+        position: relative;
+
+        @include tablet {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 19px;
+        }
+    }
+    
+    &__item::before {
+        content: '';
+        background-image: url(../img/check-registration.svg);
+        position: absolute;
+        width: 20px;
+        height: 16px;
+        left: -45px;
+
+        @include tablet{
+            left: -30px;
+        }
+
+        @include mobile {
+            left: -30px;
+        }
+    }
+}

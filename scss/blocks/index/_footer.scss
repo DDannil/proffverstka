@@ -1,18 +1,28 @@
 .footer {
     background-image: url(../img/footer-bcg.jpg);
-
+    background-size: cover;
+    
     &__top {
         display: flex;
         justify-content: space-between;
         min-height: 448px;
-    
+
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 693px;
+        }
+
+        @include mobile {
+            min-height: 550px;
+        }
     }
     
     &__quote-wrp {
         width: 360px;
         text-align: center;
-        padding: 87px 0 0 0;
-        
+        align-self: center;
     }
     
     &__quote {
@@ -29,9 +39,12 @@
         &-wrp {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            margin: 150px 0 0 0;
+            align-self: center;
             position: relative;
+
+            @include tablet {
+                margin: 48px 0 0 0;
+            }
         }
         
         &-title {
@@ -51,11 +64,27 @@
             text-align: center;
             text-transform: uppercase;
             margin: 0 0 32px 0;
+
+            @include tablet {
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 21px;
+                margin: 0 0 20px 0;
+            }
+
+            @include mobile {
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 21px;
+                margin: 0 0 15px 0;
+            }
         }
         
         &-email {
             width: 323px;
-            height: 49px;
+            min-height: 49px;
             background: #E1E1E1;
             box-sizing: border-box;
             border-radius: 25px;
@@ -78,7 +107,7 @@
         
         &-btn {
             width: 100px;
-            height: 49px;
+            min-height: 49px;
             border-radius: 0 20px 20px 0;
             box-sizing: border-box;
             padding: 7px 8px;
@@ -90,7 +119,7 @@
             color: $white-color;
             border-color: transparent;
             position: absolute;
-            right: 10px;
+            right: 0;
         }
         
         &-btn:hover,
@@ -111,6 +140,11 @@
         &-wrp {
             display: flex;
             justify-content: space-between;
+
+            @include mobile {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
         }
         
         &-copyright {
@@ -133,38 +167,42 @@
     }
 
     .icon-facebook {
-        fill: white;
+        background-color: white;
     }
     
     &__bottom-item:hover .icon-facebook,
     &__bottom-item:focus .icon-fasebook {
-        fill: #F16D7F;
+        fill: white;
+        background-color: #F16D7F;
     }
     
     .icon-inst {
-        fill: white;
+        background-color: white;
     }
     
     &__bottom-item:hover .icon-inst,
     &__bottom-item:focus .icon-inst {
-        fill: #F16D7F;
+        background-color: #F16D7F;
+        fill: white;
     }
     
     .icon-pint {
-        fill: white;
+        background-color: white;
     }
     
     &__bottom-item:hover .icon-pint,
     &__bottom-item:focus .icon-pint {
-        fill: #F16D7F;
+        background-color: #F16D7F;
+        fill: white;
     }
     
     .icon-twitter {
-        fill: white;
+        background-color: white;
     }
     
     &__bottom-item:hover .icon-twitter,
     &__bottom-item:focus .icon-twitter {
-        fill: #F16D7F;
+        background-color: #F16D7F;
+        fill: white;
     }
 }

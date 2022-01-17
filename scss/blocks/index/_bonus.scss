@@ -1,21 +1,38 @@
 .bonus {
     background-color: $black;
 
+    @include tablet {
+        padding-bottom: 48px;
+    }
+
     &__list {
         display: flex;
         justify-content: space-between;
+
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     
     &__item {
         text-align: center;
-        width: 360px;
+        width: 31%;
+
+        @include tablet {
+            width: 40%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
 
         &-img {
-            margin: 103px 0 0 0;
-        }
-        
-        &-img-procent {
-            margin: 95px 0 0 0;
+            margin-top: 103px;
+
+            @include tablet {
+                margin-top: 48px;
+            }
         }
         
         &-title {
@@ -36,6 +53,10 @@
             color: $bonus-color;
             opacity: 70%;
             margin: 16px 0 104px 0;
+
+            @include tablet {
+                margin: 16px 0 0 0;
+            }
         }
     }
 }

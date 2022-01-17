@@ -34,17 +34,21 @@
         margin: 0 0 30px;
         background-color: #F8F8F8;
 
+        @include tablet {
+            width: 49%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
         &-title {
             font-size: 13px;
             font-style: normal;
             font-weight: 400;
             line-height: 16px;
             text-transform: uppercase;
-            margin: 0 0 13px;
-        }
-        
-        &-text-wrp {
-            padding: 26px 18px 20px 29px;
+            margin: 25px 18px 13px;
         }
         
         &-text {
@@ -53,7 +57,8 @@
             font-weight: 300;
             line-height: 17px;
             color: $grey-text;
-            margin: 0 0 18px;
+            margin: 0 18px 18px;
+            width: 85%;
         }
         
         &-price {
@@ -62,22 +67,11 @@
             font-weight: 400;
             line-height: 19px;
             color: $pink-price;
+            margin: 0 18px;
         }
     }
     
-    .cart-wrapper {
-        position: relative;
-    }
-    
-    .overlay {
-        position: absolute;
-        background: #3A3838DB;
-        width: 100%;
-        min-height: 420px;
-        top: 0;
-    }
-    
-    &-btn {
+    &__btn {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -90,16 +84,6 @@
         background: transparent;
         border-color: $white-color;
         padding: 10px 13px 8px 12px;
-    }
-    
-    .overlay,
-    .product-btn {
-        display: none;
-    }
-    
-    .cart:hover .overlay,
-    .cart:hover .product-btn {
-        display: block;
     }
     
     &__link {
@@ -130,4 +114,26 @@
         display: flex;
         justify-content: center;
     }
+}
+
+.cart-wrapper {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    background: #3A3838DB;
+    width: 100%;
+    min-height: 420px;
+    top: 0;
+}
+
+.overlay,
+.products__btn {
+    display: none;
+}
+   
+.cart:hover .overlay,
+.cart:hover .products__btn {
+    display: block;
 }
