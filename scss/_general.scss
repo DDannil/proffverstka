@@ -22,6 +22,10 @@
     margin: -1px;
 }
 
+label, input {
+    display: block;
+}
+
 @media (max-width: $tablet-width) {
     .container {
         width: 736px;

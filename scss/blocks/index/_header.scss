@@ -7,8 +7,17 @@
         position: absolute;
         width: 232px;
         background: $white-color;
-        right: 0;
-        top: 100%;
+        left: 100%;
+        padding: 37px 34px;
+
+        &-title {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 17px;
+        text-transform: uppercase;
+        margin: 0 0 24px 0;
+        }
     }
     
     &__nav:hover {

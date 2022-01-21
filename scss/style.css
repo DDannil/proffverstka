@@ -24,6 +24,10 @@
   margin: -1px;
 }
 
+label, input {
+  display: block;
+}
+
 @media (max-width: 1024px) {
   .container {
     width: 736px;
@@ -46,8 +50,17 @@
   position: absolute;
   width: 232px;
   background: #ffffff;
-  right: 0;
-  top: 100%;
+  left: 100%;
+  padding: 37px 34px;
+}
+
+.header__nav-title {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 17px;
+  text-transform: uppercase;
+  margin: 0 0 24px 0;
 }
 
 .header__nav:hover {
@@ -155,6 +168,30 @@
   .header__logo-form-wrp {
     margin: 0;
   }
+}
+
+.nav-sub-item {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #F16D7F;
+  text-decoration: none;
+  margin-bottom: 12px;
+}
+
+.nav-sub-item__link {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  margin: 0 0 11px 0;
+}
+
+.nav-sub-item__link-text {
+  text-decoration: none;
+  color: #6F6E6E;
 }
 
 .brand {
@@ -886,10 +923,6 @@
 
 .registration__form-input:hover, .registration :focus {
   outline: 1px solid grey;
-}
-
-label, input {
-  display: block;
 }
 
 .form-legend {
