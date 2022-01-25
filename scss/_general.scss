@@ -22,8 +22,47 @@
     margin: -1px;
 }
 
+.form-legend {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 19px;
+    margin-bottom: 20px;
+}
+
+.form-input {
+    margin-bottom: 20px;
+    padding: 12px 17px 16px;
+    width: 360px;
+    border: 1px solid #A4A4A4;
+}
+
+.form-input:hover, :focus {
+    outline: 1px solid grey;
+}
+
+.checkbox {
+    display: flex;
+    margin: 34px 0 34px 0;
+}
+
 label, input {
     display: block;
+}
+
+.heading {
+    min-height: 148px;
+    background-color: $pink-registration-bkg;
+
+    &__text {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 29px;
+        text-transform: uppercase;
+        color: $pink-price;
+        padding: 59px 0 0 0;
+    }
 }
 
 @media (max-width: $tablet-width) {
@@ -35,5 +74,13 @@ label, input {
 @media (max-width: $mobile-width) {
     .container {
         width: 360px;
+    }
+
+    .heading__text {
+        text-align: center;
+    }
+
+    .form-input {
+        width: 359px;
     }
 }

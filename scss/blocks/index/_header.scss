@@ -8,6 +8,7 @@
         width: 232px;
         background: $white-color;
         left: 100%;
+        top: 55px;
         padding: 37px 34px;
 
         &-title {
@@ -33,10 +34,26 @@
     
     &__logo-form-wrp {
         display: flex;
+        position: relative;
     }
     
     &__search {
         margin: 10px 0 0 41px;
+
+        &-form {
+            position: absolute;
+            display: none;
+            top: 50%;
+            left: 120%;   
+        }
+
+        &-form:hover {
+            display: block;
+        }
+    }
+
+    &__logo-form-wrp:hover + .header__search-form {
+        display: block;
     }
     
     &__link {

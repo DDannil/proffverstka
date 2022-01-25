@@ -45,6 +45,12 @@
         line-height: 19px;
         }
     }
+
+    &__list {
+        @include mobile {
+            margin-bottom: 100px;
+        }
+    }
     
     &__item {
         font-size: 24px;
