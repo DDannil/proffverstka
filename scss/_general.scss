@@ -61,7 +61,26 @@ label, input {
         line-height: 29px;
         text-transform: uppercase;
         color: $pink-price;
-        padding: 59px 0 0 0;
+
+        &-wrp {
+            min-height: 148px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;   
+        }
+    }
+
+    &__path {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 17px;
+        text-transform: uppercase;
+
+        &-pink {
+        font-weight: 700;
+        color: $pink-price;
+        }
     }
 }
 
@@ -81,6 +100,6 @@ label, input {
     }
 
     .form-input {
-        width: 359px;
+        width: 90%;
     }
 }

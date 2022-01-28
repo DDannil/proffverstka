@@ -1,0 +1,11 @@
+.carousel {
+display: flex;
+justify-content: center;
+background-color: $product-color-bkg;
+position: relative;
+
+    &-img {
+        width: 37%;
+        min-height: 724px;
+    }
+}

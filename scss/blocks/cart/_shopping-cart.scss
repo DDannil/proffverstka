@@ -21,11 +21,11 @@
     }
 
     &__img {
-        width: 36%;
+        width: 262px;
         min-height: 306px;
 
         @include mobile {
-            width: 40%;
+            width: 144px;
             min-height: 188px;
         }
     }
@@ -56,6 +56,11 @@
         line-height: 19px;
         margin: 14px 0 26px 17px;
         }
+    }
+
+    &__title::after {
+        content: '';
+        
     }
 
     &__sub-item-list-text {
@@ -241,8 +246,3 @@
         opacity: 0.7;
         }
 }
-
-
-
-
-

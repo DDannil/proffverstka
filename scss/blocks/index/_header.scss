@@ -10,6 +10,17 @@
         left: 100%;
         top: 55px;
         padding: 37px 34px;
+        z-index: 999999;
+
+        @include tablet {
+            left: 0;
+        }
+
+        @include mobile {
+            width: 116px;
+            top: 52px;
+            left: -116px;
+        }
 
         &-title {
         font-size: 14px;

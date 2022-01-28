@@ -1,7 +1,5 @@
 .registration__form {
-            @include mobile {
-                width: 100%;
-}
+            
         &-wrp {
             display: flex;
             margin-top: 64px;
