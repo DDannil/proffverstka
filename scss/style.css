@@ -196,6 +196,21 @@ label, input {
 
 .header__link {
   margin: 0 0 0 33px;
+  position: relative;
+}
+
+.header__link-span {
+  position: absolute;
+  color: #ffffff;
+  background: #F16D7F;
+  width: 19px;
+  height: 19px;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  border-radius: 50%;
+  right: -10px;
+  top: -20px;
 }
 
 .header__menu {
@@ -254,6 +269,37 @@ label, input {
 .header__link:hover .basket-icon,
 .header__link:focus .basket-icon {
   fill: #F16D7F;
+}
+
+.header__basket {
+  width: 400px;
+  min-height: 50px;
+  background: #ffffff;
+  position: absolute;
+  left: -30px;
+}
+
+.header__basket-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-weight: bold;
+}
+
+.header__basket-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.header__basket-total {
+  text-align: right;
+  margin: 10px 10px 0 0;
+  font-weight: bold;
 }
 
 @media (max-width: 1024px) {
